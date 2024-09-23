@@ -1,11 +1,21 @@
-const labels = Utils.months({count: 7});
-const data = {
-  labels: labels,
-  datasets: [{
-	label: 'Patrimoine',
-	data: [2014, 2015, 2016, 2017, 2018, 2019, 2020],
-    fill: false,
-    borderColor: 'rgb(75, 192, 192)',
-    tension: 0.1
-  }]
+// src/components/Chart.js
+import React from 'react';
+import { Line } from 'react-chartjs-2';
+
+const Chart = ({ data }) => {
+  return (
+    <Line
+      data={data}
+      options={{
+        responsive: true,
+        scales: {
+          y: {
+            beginAtZero: false,
+          },
+        },
+      }}
+    />
+  );
 };
+
+export default Chart;
