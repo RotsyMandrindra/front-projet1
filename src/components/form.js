@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import moment from 'moment';
-import ChartComponent from './chart'; 
+import ChartComponent from './Chart'; 
 
 function Form() {
   const [startDate, setStartDate] = useState(moment().subtract(10, 'years').format('YYYY-MM-DD'));
